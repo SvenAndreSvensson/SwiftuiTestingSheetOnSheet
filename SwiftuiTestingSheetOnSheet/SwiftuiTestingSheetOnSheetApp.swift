@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct SwiftuiTestingSheetOnSheetApp: App {
+    
+    @StateObject var marketManager = MarketsManager()
+    @StateObject var securitiesManager = SecuritiesManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(marketManager)
+                .environmentObject(securitiesManager)
         }
     }
 }

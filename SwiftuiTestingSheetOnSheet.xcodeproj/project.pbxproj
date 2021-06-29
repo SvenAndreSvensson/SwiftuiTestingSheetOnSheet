@@ -11,6 +11,14 @@
 		2662D2CA2689B802003475CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2C92689B802003475CD /* ContentView.swift */; };
 		2662D2CC2689B805003475CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2662D2CB2689B805003475CD /* Assets.xcassets */; };
 		2662D2CF2689B805003475CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2662D2CE2689B805003475CD /* Preview Assets.xcassets */; };
+		2662D2D62689C790003475CD /* Markets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2D52689C790003475CD /* Markets.swift */; };
+		2662D2D82689CB77003475CD /* Securities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2D72689CB77003475CD /* Securities.swift */; };
+		2662D2DA2689CDDD003475CD /* SecurityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2D92689CDDD003475CD /* SecurityDetailsView.swift */; };
+		2662D2DC2689D044003475CD /* SecurityEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2DB2689D044003475CD /* SecurityEditView.swift */; };
+		2662D2DE2689D170003475CD /* SecurityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2DD2689D170003475CD /* SecurityCard.swift */; };
+		2662D2E02689D1A3003475CD /* SecuritiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2DF2689D1A3003475CD /* SecuritiesView.swift */; };
+		2662D2E22689D43D003475CD /* MarketsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2E12689D43D003475CD /* MarketsSelectionView.swift */; };
+		2662D2E42689D48E003475CD /* MarketEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2E32689D48E003475CD /* MarketEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		2662D2C92689B802003475CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2662D2CB2689B805003475CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2662D2CE2689B805003475CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2662D2D52689C790003475CD /* Markets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markets.swift; sourceTree = "<group>"; };
+		2662D2D72689CB77003475CD /* Securities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Securities.swift; sourceTree = "<group>"; };
+		2662D2D92689CDDD003475CD /* SecurityDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityDetailsView.swift; sourceTree = "<group>"; };
+		2662D2DB2689D044003475CD /* SecurityEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityEditView.swift; sourceTree = "<group>"; };
+		2662D2DD2689D170003475CD /* SecurityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityCard.swift; sourceTree = "<group>"; };
+		2662D2DF2689D1A3003475CD /* SecuritiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritiesView.swift; sourceTree = "<group>"; };
+		2662D2E12689D43D003475CD /* MarketsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsSelectionView.swift; sourceTree = "<group>"; };
+		2662D2E32689D48E003475CD /* MarketEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +69,8 @@
 			children = (
 				2662D2C72689B802003475CD /* SwiftuiTestingSheetOnSheetApp.swift */,
 				2662D2C92689B802003475CD /* ContentView.swift */,
+				2662D2E62689E069003475CD /* markets */,
+				2662D2E52689E05A003475CD /* securities */,
 				2662D2CB2689B805003475CD /* Assets.xcassets */,
 				2662D2CD2689B805003475CD /* Preview Content */,
 			);
@@ -65,6 +83,28 @@
 				2662D2CE2689B805003475CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2662D2E52689E05A003475CD /* securities */ = {
+			isa = PBXGroup;
+			children = (
+				2662D2D72689CB77003475CD /* Securities.swift */,
+				2662D2DF2689D1A3003475CD /* SecuritiesView.swift */,
+				2662D2DD2689D170003475CD /* SecurityCard.swift */,
+				2662D2D92689CDDD003475CD /* SecurityDetailsView.swift */,
+				2662D2DB2689D044003475CD /* SecurityEditView.swift */,
+			);
+			path = securities;
+			sourceTree = "<group>";
+		};
+		2662D2E62689E069003475CD /* markets */ = {
+			isa = PBXGroup;
+			children = (
+				2662D2D52689C790003475CD /* Markets.swift */,
+				2662D2E32689D48E003475CD /* MarketEditView.swift */,
+				2662D2E12689D43D003475CD /* MarketsSelectionView.swift */,
+			);
+			path = markets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2662D2DC2689D044003475CD /* SecurityEditView.swift in Sources */,
 				2662D2CA2689B802003475CD /* ContentView.swift in Sources */,
+				2662D2E22689D43D003475CD /* MarketsSelectionView.swift in Sources */,
+				2662D2E02689D1A3003475CD /* SecuritiesView.swift in Sources */,
+				2662D2E42689D48E003475CD /* MarketEditView.swift in Sources */,
+				2662D2D62689C790003475CD /* Markets.swift in Sources */,
 				2662D2C82689B802003475CD /* SwiftuiTestingSheetOnSheetApp.swift in Sources */,
+				2662D2DE2689D170003475CD /* SecurityCard.swift in Sources */,
+				2662D2D82689CB77003475CD /* Securities.swift in Sources */,
+				2662D2DA2689CDDD003475CD /* SecurityDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +251,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -257,6 +306,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -277,7 +327,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +357,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

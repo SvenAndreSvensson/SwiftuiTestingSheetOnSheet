@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
-            Text("Hello, world!")
-                .padding()
-        }
+       SecuritiesView()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(SecuritiesManager())
     }
 }
+
+
