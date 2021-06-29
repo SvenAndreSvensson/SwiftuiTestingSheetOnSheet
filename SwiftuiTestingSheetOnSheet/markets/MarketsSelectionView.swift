@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MarketsSelectionView: View {
-    @Binding var selection: Market?
+    @Binding var marketId: UUID?
     @EnvironmentObject var manager: MarketsManager
     
     @State private var newData = Market.Data()
@@ -20,7 +20,7 @@ struct MarketsSelectionView: View {
     
     var body: some View {
         
-        List(manager.markets, id: \.self, selection: $selection) { market in
+        List(manager.markets, id: \.id, selection: $marketId) { market in
             Text(market.description)
         }
         .toolbar(content: {
@@ -44,8 +44,11 @@ struct MarketsSelectionView: View {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             Button("Add") {
                                 
+                                let _newId = UUID()
+                                marketId = _newId
+                                
                                 let newMarket = Market(
-                                    id: UUID(),
+                                    id: _newId,
                                     name: newData.name,
                                     nickname: newData.nickname,
                                     mic: newData.mic)
@@ -64,10 +67,10 @@ struct MarketsSelectionView: View {
 }
 
 struct MarketsSelectionView_Previews: PreviewProvider {
-    static var market = Market.data[0]
+    static var marketId: UUID = Market.data[0].id
     static var previews: some View {
         NavigationView{
-            MarketsSelectionView(selection: .constant(market ))
+            MarketsSelectionView(marketId: .constant(marketId ))
             .environmentObject(MarketsManager())
         }
     }

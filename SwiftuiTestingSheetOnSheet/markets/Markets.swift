@@ -15,6 +15,14 @@ class MarketsManager: ObservableObject {
         if marketId == nil { return nil }
         return markets.first { $0.id == marketId }
     }
+    
+    func remove(_ market: Market){
+        guard let index = markets.firstIndex(of: market) else {
+            print("Can´t remove market. market not found!")
+            return
+        }
+        markets.remove(at: index)
+    }
 }
 
 struct Market: Identifiable, Codable, Equatable, Hashable {
@@ -31,6 +39,8 @@ struct Market: Identifiable, Codable, Equatable, Hashable {
             Market(id: UUID(uuidString: "970D6B04-6EA2-44C1-8AF9-73E19F3E6121")!, name: "New York Stock Exchange", nickname: "NYSE", mic: "XNYS")
         ]
     }
+    
+    static var zero = Market(id: UUID(uuidString: "00000000-0000-0000-0000-000000000000")!, name: "", nickname: "", mic: "")
 }
 
 extension Market {

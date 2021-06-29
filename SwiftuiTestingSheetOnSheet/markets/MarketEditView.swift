@@ -35,7 +35,6 @@ struct MarketEditView: View {
                 
             } // Section
         } // List
-      
     }
 }
 

@@ -19,6 +19,9 @@
 		2662D2E02689D1A3003475CD /* SecuritiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2DF2689D1A3003475CD /* SecuritiesView.swift */; };
 		2662D2E22689D43D003475CD /* MarketsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2E12689D43D003475CD /* MarketsSelectionView.swift */; };
 		2662D2E42689D48E003475CD /* MarketEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2662D2E32689D48E003475CD /* MarketEditView.swift */; };
+		26BAE5FC268B3927008F324A /* MarketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BAE5FB268B3927008F324A /* MarketsView.swift */; };
+		26BAE5FE268B3963008F324A /* MaketCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BAE5FD268B3963008F324A /* MaketCard.swift */; };
+		26BAE600268B39CC008F324A /* MarketDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BAE5FF268B39CC008F324A /* MarketDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		2662D2DF2689D1A3003475CD /* SecuritiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuritiesView.swift; sourceTree = "<group>"; };
 		2662D2E12689D43D003475CD /* MarketsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsSelectionView.swift; sourceTree = "<group>"; };
 		2662D2E32689D48E003475CD /* MarketEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketEditView.swift; sourceTree = "<group>"; };
+		26BAE5FB268B3927008F324A /* MarketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsView.swift; sourceTree = "<group>"; };
+		26BAE5FD268B3963008F324A /* MaketCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaketCard.swift; sourceTree = "<group>"; };
+		26BAE5FF268B39CC008F324A /* MarketDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				2662D2D52689C790003475CD /* Markets.swift */,
 				2662D2E32689D48E003475CD /* MarketEditView.swift */,
 				2662D2E12689D43D003475CD /* MarketsSelectionView.swift */,
+				26BAE5FB268B3927008F324A /* MarketsView.swift */,
+				26BAE5FF268B39CC008F324A /* MarketDetailsView.swift */,
+				26BAE5FD268B3963008F324A /* MaketCard.swift */,
 			);
 			path = markets;
 			sourceTree = "<group>";
@@ -179,12 +188,15 @@
 			files = (
 				2662D2DC2689D044003475CD /* SecurityEditView.swift in Sources */,
 				2662D2CA2689B802003475CD /* ContentView.swift in Sources */,
+				26BAE5FE268B3963008F324A /* MaketCard.swift in Sources */,
 				2662D2E22689D43D003475CD /* MarketsSelectionView.swift in Sources */,
 				2662D2E02689D1A3003475CD /* SecuritiesView.swift in Sources */,
+				26BAE5FC268B3927008F324A /* MarketsView.swift in Sources */,
 				2662D2E42689D48E003475CD /* MarketEditView.swift in Sources */,
 				2662D2D62689C790003475CD /* Markets.swift in Sources */,
 				2662D2C82689B802003475CD /* SwiftuiTestingSheetOnSheetApp.swift in Sources */,
 				2662D2DE2689D170003475CD /* SecurityCard.swift in Sources */,
+				26BAE600268B39CC008F324A /* MarketDetailsView.swift in Sources */,
 				2662D2D82689CB77003475CD /* Securities.swift in Sources */,
 				2662D2DA2689CDDD003475CD /* SecurityDetailsView.swift in Sources */,
 			);
@@ -327,7 +339,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,7 +369,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

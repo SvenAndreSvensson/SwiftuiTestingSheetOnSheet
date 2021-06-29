@@ -12,9 +12,15 @@ struct SecurityDetailsView: View {
     
     @EnvironmentObject var manager: SecuritiesManager
     @EnvironmentObject var marketsManager: MarketsManager
-
+    
+    // current market
+    @State var market: Market = Market.zero
+    
+    // changing security
     @State private var showEditor = false
     @State private var editData: Security.Data = Security.Data()
+    
+    // Alert when deleting security
     @State private var showAlert = false
     
     var marketDescription: String {
@@ -27,12 +33,11 @@ struct SecurityDetailsView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Security Info")) {
+            Section(header: Text("Security Details")) {
                 HStack{
                     Text("Name")
                     Spacer()
                     Text(security.name)
-                        
                 }
                 HStack {
                     Text("Nickname")
@@ -44,29 +49,33 @@ struct SecurityDetailsView: View {
                     Spacer()
                     Text(security.ticker)
                 }
-                HStack {
-                    Text("market")
-                    Spacer()
-                    Text(marketDescription)
+                NavigationLink(destination: MarketDetailsView(market: $market)) {
+                    HStack {
+                        Text("market")
+                        Spacer()
+                        Text(market.description)
+                    }
                 }
             }
         } // List
         //.listStyle(.insetGrouped)
-        
         .navigationTitle(security.description)
+        .onAppear(perform: {
+            print("SecurityDetailsView, onAppear")
+            market = marketsManager.market(marketId: security.marketId) ?? Market.zero
+        })
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button("Edit") {
+                    print("SecurityDetailsView, toolbar edit")
                     editData = security.data
                     showEditor = true
-                    
                 }
             }
         }
         .fullScreenCover(isPresented: $showEditor) {
             NavigationView {
                 SecurityEditView(securityData: $editData)
-                    .id(UUID())
                     .navigationTitle(editData.description)
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarLeading) {
@@ -77,6 +86,7 @@ struct SecurityDetailsView: View {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
                             Button("Done") {
                                 security.update(from: editData)
+                                market = marketsManager.market(marketId: security.marketId) ?? Market.zero
                                 showEditor = false
                             }.disabled(editData.name.isEmpty || editData.nickname.isEmpty)
                         }

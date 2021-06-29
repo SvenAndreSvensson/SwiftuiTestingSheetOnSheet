@@ -41,7 +41,7 @@ struct SecurityEditView: View {
                             .multilineTextAlignment(.trailing)
                     }
                     
-                    NavigationLink( destination: MarketsSelectionView(selection: $market) ) {
+                    NavigationLink( destination: MarketsSelectionView(marketId: $securityData.marketId) ) {
                         HStack{
                             Text("Market")
                             Spacer()
@@ -54,14 +54,6 @@ struct SecurityEditView: View {
             .onAppear(perform: {
                 market = marketsManager.market(marketId: securityData.marketId)
             })
-           
-            .onChange(of: market) { newValue in
-                if let newValue = newValue {
-                    if securityData.marketId != newValue.id {
-                        securityData.marketId = newValue.id
-                    }
-                }
-            }
     }
 }
 
