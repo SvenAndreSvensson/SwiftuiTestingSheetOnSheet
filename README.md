@@ -2,5 +2,5 @@
 
 ## `SwiftUI` Testing navigation, sheets and such :)
 
-This test based on the [scrumdinger tutorial](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger) to see if the source of truth is as sweet as they say :)
+This test is based on the [scrumdinger tutorial](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger) to see if the source of truth is as sweet as they say :)
 
