@@ -63,7 +63,7 @@ struct MarketsView: View {
                                     newData = Market.Data()
                                     showEditor = false
                                 }
-                                .disabled(newData.name.isEmpty || newData.nickname.isEmpty)
+                                .disabled(newData.name.isEmpty)
                             }
                         } // toolbar
             }) // sheet

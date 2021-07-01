@@ -44,7 +44,7 @@ struct Market: Identifiable, Codable, Equatable, Hashable {
 }
 
 extension Market {
-    struct Data {
+    struct Data: Equatable {
         var description: String  { return nickname.isEmpty ? (name.isEmpty ? "No name" : name) : nickname  }
         
         var name: String = ""

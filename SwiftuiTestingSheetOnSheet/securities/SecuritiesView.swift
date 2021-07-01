@@ -36,7 +36,10 @@ struct SecuritiesView: View {
             .navigationTitle("Securities")
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button(action: { showEditor = true }) {
+                    Button(action: {
+                        newData = Security.Data()
+                        showEditor = true
+                    }) {
                         Image(systemName: "plus")
                     }
                 }
@@ -67,7 +70,7 @@ struct SecuritiesView: View {
                                     newData = Security.Data()
                                     showEditor = false
                                 }
-                                .disabled(newData.name.isEmpty || newData.nickname.isEmpty)
+                                .disabled(newData.name.isEmpty)
                             }
                         } // toolbar
                 }

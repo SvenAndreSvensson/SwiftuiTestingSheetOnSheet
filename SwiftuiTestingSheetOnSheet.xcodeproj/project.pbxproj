@@ -107,11 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				2662D2D52689C790003475CD /* Markets.swift */,
+				26BAE5FB268B3927008F324A /* MarketsView.swift */,
+				26BAE5FD268B3963008F324A /* MaketCard.swift */,
+				26BAE5FF268B39CC008F324A /* MarketDetailsView.swift */,
 				2662D2E32689D48E003475CD /* MarketEditView.swift */,
 				2662D2E12689D43D003475CD /* MarketsSelectionView.swift */,
-				26BAE5FB268B3927008F324A /* MarketsView.swift */,
-				26BAE5FF268B39CC008F324A /* MarketDetailsView.swift */,
-				26BAE5FD268B3963008F324A /* MaketCard.swift */,
 			);
 			path = markets;
 			sourceTree = "<group>";

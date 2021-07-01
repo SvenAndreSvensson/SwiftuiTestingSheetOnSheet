@@ -65,7 +65,7 @@ struct MarketDetailsView: View {
                             Button("Done") {
                                 market.update(from: editData)
                                 showEditor = false
-                            }.disabled(editData.name.isEmpty || editData.nickname.isEmpty)
+                            }.disabled(editData.name.isEmpty)
                         }
                         ToolbarItemGroup(placement: .bottomBar) {
                             Button("Delete \(market.nickname)") {

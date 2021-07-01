@@ -25,7 +25,10 @@ struct MarketsSelectionView: View {
         }
         .toolbar(content: {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: { showEditor = true }) {
+                Button(action: {
+                    newData = Market.Data()
+                    showEditor = true
+                }) {
                     Image(systemName: "plus")
                 }
             }
@@ -57,7 +60,7 @@ struct MarketsSelectionView: View {
                             
                                 showEditor = false
                             }
-                            .disabled(newData.name.isEmpty || newData.nickname.isEmpty)
+                            .disabled(newData.name.isEmpty)
                         }
                     } // toolbar
             }

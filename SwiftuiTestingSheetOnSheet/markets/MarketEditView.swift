@@ -19,18 +19,21 @@ struct MarketEditView: View {
                         
                     TextField("Name", text: $marketData.name)
                         .multilineTextAlignment(.trailing)
+                        .textCase(.uppercase)
                 }
                 HStack{
                     Text("NickName")
                     Spacer()
                     TextField("Nickname", text: $marketData.nickname)
                         .multilineTextAlignment(.trailing)
+                        .textCase(.uppercase)
                 }
                 HStack{
                     Text("mic")
                     Spacer()
                     TextField("mic", text: $marketData.mic)
                         .multilineTextAlignment(.trailing)
+                        .autocapitalization(.allCharacters)
                 }
                 
             } // Section

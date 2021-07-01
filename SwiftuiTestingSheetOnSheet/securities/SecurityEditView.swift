@@ -27,18 +27,21 @@ struct SecurityEditView: View {
                         
                         TextField("Name", text: $securityData.name)
                             .multilineTextAlignment(.trailing)
+                            .textCase(.uppercase)
                     }
                     HStack{
                         Text("NickName")
                         Spacer()
                         TextField("Nickname", text: $securityData.nickname)
                             .multilineTextAlignment(.trailing)
+                            .textCase(.uppercase)
                     }
                     HStack{
                         Text("Ticker")
                         Spacer()
                         TextField("Ticker", text: $securityData.ticker)
                             .multilineTextAlignment(.trailing)
+                            .autocapitalization(.allCharacters)
                     }
                     
                     NavigationLink( destination: MarketsSelectionView(marketId: $securityData.marketId) ) {

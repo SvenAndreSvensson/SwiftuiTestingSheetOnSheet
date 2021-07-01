@@ -88,7 +88,7 @@ struct SecurityDetailsView: View {
                                 security.update(from: editData)
                                 market = marketsManager.market(marketId: security.marketId) ?? Market.zero
                                 showEditor = false
-                            }.disabled(editData.name.isEmpty || editData.nickname.isEmpty)
+                            }.disabled(editData.name.isEmpty)
                         }
                         ToolbarItemGroup(placement: .bottomBar) {
                             Button("Delete \(security.nickname)") {
